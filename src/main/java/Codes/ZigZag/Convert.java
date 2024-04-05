@@ -26,14 +26,18 @@ import java.util.Scanner;
 public class Convert {
     int rows;
     String wordInput;
-    String wordResult;
+    public String wordResult;
 
     // Constructor which receives input of user and converts the word
     public Convert() {
-        try {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Put the word");
+            if(!scanner.hasNext()){
+                throw new InputException("Put in the word.");
+                }
+
             String userWord = scanner.next();
+
             System.out.println("Put the number of rows");
             if (!scanner.hasNextInt()) {
                 throw new InputException("Number of rows must be an integer.");
@@ -47,10 +51,12 @@ public class Convert {
 
             this.rows = userRows;
             this.wordInput = userWord;
+            if (userRows == 1){
+                this.wordResult = userWord;
+                return;
+            }
             this.wordResult = getWordResults(userWord, userRows);
-        } catch (InputException e) {
-            System.err.println("Input error: " + e.getMessage());
-        }
+
     }
 
     // Reads created matrix to give results

@@ -20,6 +20,7 @@ import java.util.Scanner;
 
  */
 public class Context {
+    public int matrix[];
     private AllAlgorithms allAlgorithms;
 
     public void setAlgorithm(AllAlgorithms allAlgorithms){
@@ -30,7 +31,7 @@ public class Context {
         long tStart, tEnd, tDelta;
         int size = 0;
         double elapsedSeconds;
-        try{
+
             Scanner scanner = new Scanner(System.in);
             System.out.println("Put the size of sorted matrix");
             if (!scanner.hasNextInt()) {
@@ -40,10 +41,7 @@ public class Context {
             if (size <= 0) {
                 throw new InputException("Number of rows must be greater than 0.");
             }
-        }
-        catch (InputException e) {
-            System.err.println("Input error: " + e.getMessage());
-        }
+
 
         //Prepare table reversed for pessimistic order
         int [] nums = SortNumbers.createNumbers(size);
@@ -84,5 +82,6 @@ public class Context {
 
         System.out.println("Optimistic sorting time: " + elapsedSeconds);
 
+        matrix = nums;
     }
 }

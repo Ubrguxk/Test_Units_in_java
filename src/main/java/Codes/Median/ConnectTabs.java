@@ -21,7 +21,7 @@ public class ConnectTabs {
 
     // Receiving input from the user and creating random tables. Calls method to connect those and calculate median
     public ConnectTabs(){
-        try {
+
             Scanner scanner = new Scanner(System.in);
             System.out.println("Put the size of tab1");
             if (!scanner.hasNextInt()) {
@@ -44,10 +44,7 @@ public class ConnectTabs {
             this.tab = connectTab(tab1, tab2);
             this.median = findMedian(this.tab);
             System.out.println("Median of random tables of this size is: " + this.median);
-        }
-        catch (InputException e) {
-            System.err.println("Input error: " + e.getMessage());
-        }
+
     }
 
     public int [] connectTab(int [] tab1, int [] tab2){
@@ -81,5 +78,9 @@ public class ConnectTabs {
         else{
             return (tab[middle-1] + tab[middle]) / 2;
         }
+    }
+
+    public int [] getTab(){
+        return tab;
     }
 }

@@ -23,9 +23,8 @@ public class SpinMatrix {
     int n;
     int m;
     int tab[][];
-    int spinned[];
+    public int[] spinned;
     public SpinMatrix(){
-        try {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Put the size n of the tab (rows)");
             if (!scanner.hasNextInt()) {
@@ -50,9 +49,6 @@ public class SpinMatrix {
             this.tab = tab;
             System.out.println("Spinned:");
             this.spinned = getSpinned(tab, n, m);
-        } catch (InputException e) {
-            System.err.println("Input error: " + e.getMessage());
-        }
     }
 
     public int[] getSpinned(int [] [] tab,int n, int m) {
@@ -130,5 +126,13 @@ public class SpinMatrix {
         }
         //Filling the tab
         return tab;
+    }
+
+    public int [][] getTab(){
+        return tab;
+    }
+
+    public int[] getSpin() {
+        return spinned;
     }
 }

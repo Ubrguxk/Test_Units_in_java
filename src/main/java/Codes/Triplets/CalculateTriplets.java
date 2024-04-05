@@ -11,7 +11,6 @@ import java.util.Scanner;
  */
 public class CalculateTriplets {
     public CalculateTriplets(){
-        try {
             Scanner scanner = new Scanner(System.in);
             System.out.println("How many numbers will be put?");
             if (!scanner.hasNextInt()) {
@@ -27,11 +26,6 @@ public class CalculateTriplets {
                 tab[i] = scanner.nextInt();
             }
             findTiplets(tab);
-        }
-        catch (InputException e) {
-            System.err.println("Input error: " + e.getMessage());
-        }
-
     }
 
     public void findTiplets(int tab[]){
@@ -61,6 +55,9 @@ public class CalculateTriplets {
                     }
                 }
             }
+        }
+        if(stored.isEmpty()){
+            System.out.println("No triplets found.");
         }
     }
 

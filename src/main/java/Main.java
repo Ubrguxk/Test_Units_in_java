@@ -1,9 +1,8 @@
-import Codes.Algorithms.*;
 import Codes.Median.ConnectTabs;
 import Codes.Spiral.SpinMatrix;
 import Codes.Triplets.CalculateTriplets;
 import Codes.ZigZag.Convert;
-
+import Codes.Algorithms.*;
 import java.util.Scanner;
 
 import static java.lang.System.exit;
