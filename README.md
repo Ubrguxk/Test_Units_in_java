@@ -12,4 +12,4 @@ It implements the Junit Tests and its made as a Maven project.
 Completed.
 
 ## Acknowledgements
-All the structure and content in this project was given by my teacher.
+Project structure was planned by my teacher. 
