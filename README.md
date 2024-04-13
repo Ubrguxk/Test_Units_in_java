@@ -9,7 +9,7 @@ It implements the Junit Tests and its made as a Maven project.
 - It was written in Oracle open JDK version 21.0.2 using Intellij Idea.
 
 ## Project Status
-Still in progress.
+Completed.
 
 ## Acknowledgements
 All the structure and content in this project was given by my teacher.
